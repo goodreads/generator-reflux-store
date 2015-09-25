@@ -11,7 +11,7 @@ let getState = function() {
 };
 
 let reset = function(data) {
-  getState.reset(_.merge({}, defaultState, data));
+  getState().reset(_.merge({}, defaultState, data));
 }
 
 export default Reflux.createStore({

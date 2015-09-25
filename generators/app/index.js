@@ -6,9 +6,10 @@ module.exports = yeoman.generators.NamedBase.extend({
   writing: {
     writeJs: function () {
       var fileExtension = ".js.es6";
-      var filenameBase = _.snakeCase(this.name);
+      var storeName = this.name + "Store";
+      var filenameBase = _.snakeCase(storeName);
       var store = {
-        varName: this.name[0].toLowerCase() + this.name.substring(1),
+        varName: storeName,
         filename: filenameBase
       };
       var actions = {
@@ -36,7 +37,7 @@ module.exports = yeoman.generators.NamedBase.extend({
         this.templatePath('actions.js.es6'),
         this.destinationPath('app/gulp/javascripts/react_actions/' + actions.filename + fileExtension),
         {
-          name: this.name,
+          
         }
       );
     }
