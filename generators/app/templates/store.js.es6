@@ -18,6 +18,11 @@ export default Reflux.createStore({
   listenables: [<%= actions.varName %>],
 
   initializeWith: function(data) {
+    _.each(_.keys(data), (key) => {
+      if (!_.has(defaultState, key)) {
+        throw new Error(`Unexpected key passed to initializeWith. Received ${key}. Expected one of ${_.keys(defaultState)}`);
+      }
+    });
     reset(data);
   },
 
