@@ -1,0 +1,27 @@
+{
+  "name": "generator-reflux-store",
+  "version": "0.0.1",
+  "description": "Yeoman generator",
+  "license": "MIT",
+  "main": "app/index.js",
+  "repository": "rearadmiral/generator-refluxstore",
+  "author": {
+    "name": "Bill DePhillips",
+    "email": "bill.dephillips@gmail.com",
+    "url": "https://github.com/rearadmiral"
+  },
+  "files": [
+    "generators"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^0.19.0",
+    "chalk": "^1.0.0",
+    "yosay": "^1.0.2"
+  },
+  "devDependencies": {
+    "lodash": "^3.10.1"
+  }
+}
