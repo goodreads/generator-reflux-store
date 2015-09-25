@@ -36,9 +36,7 @@ module.exports = yeoman.generators.NamedBase.extend({
       this.fs.copyTpl(
         this.templatePath('actions.js.es6'),
         this.destinationPath('app/gulp/javascripts/react_actions/' + actions.filename + fileExtension),
-        {
-          
-        }
+        {}
       );
     }
   }
