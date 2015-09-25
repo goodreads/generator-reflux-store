@@ -10,7 +10,7 @@ describe("<%= store.varName %>", () => {
     });
     <%= store.varName %>.onSendMessage("Awooga");
     <%= store.varName %>.getState().messages.should.eql ["Awooga"];
-  })
+  });
 
   afterEach(() => {
     <%= store.varName %>.reset();
