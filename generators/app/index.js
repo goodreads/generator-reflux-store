@@ -6,11 +6,11 @@ module.exports = yeoman.generators.NamedBase.extend({
   writing: {
     writeJs: function () {
       var fileExtension = ".js.es6";
+      var filenameBase = _.snakeCase(this.name);
       var storeName = this.name + "Store";
-      var filenameBase = _.snakeCase(storeName);
       var store = {
         varName: storeName,
-        filename: filenameBase
+        filename: filenameBase + "_store"
       };
       var actions = {
         varName: this.name + "Actions",
