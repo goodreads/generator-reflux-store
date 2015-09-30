@@ -10,7 +10,7 @@ let getState = function() {
   return state.get();
 };
 
-let reset = function(data) {
+let resetTo = function(data) {
   getState().reset(_.merge({}, defaultState, data));
 };
 
@@ -24,14 +24,14 @@ export default Reflux.createStore({
                             key + " Expected one of " + _.keys(defaultState));
       }
     });
-    reset(data);
+    resetTo(data);
   },
 
   getState: getState,
   getInitialState: getState,
 
   reset: function() {
-    reset();
+    resetTo({});
   },
 
   notifyListeners: function() {
