@@ -20,9 +20,8 @@ export default Reflux.createStore({
   initializeWith: function(data) {
     _.each(_.keys(data), (key) => {
       if (!_.has(defaultState, key)) {
-        var errorMessage = "Unexpected key passed to initializeWith. Received " +
-                            key + " Expected one of " + _.keys(defaultState);
-        throw new Error(errorMessage);
+        throw new Error("Unexpected key passed to initializeWith. Received " +
+                            key + " Expected one of " + _.keys(defaultState));
       }
     });
     reset(data);
