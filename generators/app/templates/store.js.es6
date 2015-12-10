@@ -17,7 +17,7 @@ let resetTo = function(data) {
 export default Reflux.createStore({
   listenables: [<%= actions.varName %>],
 
-  initializeWith: function(data) {
+  initializeWith(data) {
     _.each(_.keys(data), (key) => {
       if (!_.has(defaultState, key)) {
         throw new Error("Unexpected key passed to initializeWith. Received " +
@@ -30,15 +30,15 @@ export default Reflux.createStore({
   getState: getState,
   getInitialState: getState,
 
-  reset: function() {
+  reset() {
     resetTo({});
   },
 
-  notifyListeners: function() {
+  notifyListeners() {
     this.trigger(getState());
   },
 
-  onSendMessage: function(message) {
+  onSendMessage(message) {
     getState().messages.push(message);
     this.notifyListeners();
   }
