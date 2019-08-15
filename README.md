@@ -1,3 +1,5 @@
+NOTE: Reflux is deprecated at Goodreads.
+
 Yeoman Reflux Store Generator
 ================================
 
